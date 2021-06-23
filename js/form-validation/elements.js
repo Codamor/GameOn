@@ -19,6 +19,7 @@ let lastNameFormData = document.getElementsByClassName("formData")[1] ;
 let emailFormData = document.getElementsByClassName("formData")[2] ;
 let birthDateFormData = document.getElementsByClassName("formData")[3] ;
 let quantityFormData = document.getElementsByClassName("formData")[4] ;
+let locationsFormData = document.getElementsByClassName("formData")[5] ;
 
 //REGEX
 let containsLettersOnly = /^[a-z]+$/i ;
@@ -31,6 +32,6 @@ let inputIsEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]
 firstName.addEventListener("change", checkFirstName) ;
 lastName.addEventListener("change", checkLastName);
 email.addEventListener("change", checkEmail);
-birthdate.addEventListener("change", checkBirthDate);
+birthDate.addEventListener("change", checkBirthDate);
 quantity.addEventListener("change", checkQuantity);
 
