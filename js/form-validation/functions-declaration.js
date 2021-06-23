@@ -1,8 +1,5 @@
 
 
-function checkEmail(){
-
-}
 
 function checkBirthDate(){
 
