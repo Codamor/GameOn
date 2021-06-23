@@ -1,4 +1,4 @@
-//DOM ELEMENTS VALUES
+//DOM ELEMENTS ID's
 let firstName = document.getElementById("first") ;
 let lastName = document.getElementById("last") ;
 let email = document.getElementById("email") ;
@@ -13,8 +13,31 @@ let location6 = document.getElementById("location6") ;
 let checkBox1 = document.getElementById("checkbox1") ;
 let checkBox2 = document.getElementById("checkbox2") ;
 
+
 //CHECK INPUT FUNCTIONS
 function checkFirstName(){
+    let check = false ;
+    if (firstName.value.trim().length < 2 ){
+        document
+            .getElementsByClassName("formData")[0]
+            .setAttribute(["data-error-visible"], true) ;
+        document
+            .getElementsByClassName("formData")[0]
+            .setAttribute(["data-error"], "true")         ;
+        document
+            .getElementsByClassName("formData")[0]
+            .removeAttribute(["data-valid-visible"]) ;
+    } else {
+        document
+            .getElementsByClassName("formData")[0]
+            .removeAttribute(["data-error-visible"]) ;
+        document
+            .getElementsByClassName("formData")[0]
+            .removeAttribute(["data-error"])         ;
+        document
+            .getElementsByClassName("formData")[0]
+            .setAttribute(["data-valid-visible"], true) ;
+    }
 
 }
 
