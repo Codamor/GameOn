@@ -13,20 +13,37 @@ let location6 = document.getElementById("location6") ;
 let checkBox1 = document.getElementById("checkbox1") ;
 let checkBox2 = document.getElementById("checkbox2") ;
 
+//REGEX
+let containsLettersOnly = /^[a-z]+$/i ; //return true if letters only
+let containsNumber = /[0-9]/ ; //return true if contains numbers
+let containsForbiddenCaracters = /[!"#$%&'()*+,./:;<=>?@^_`{|}~]/
+
 
 //CHECK INPUT FUNCTIONS
 function checkFirstName(){
-    let check = false ;
-    if (firstName.value.trim().length < 2 ){
+
+    if ( containsLettersOnly.test(firstName.value.trim()) && firstName.value.trim().length < 2){
         document
             .getElementsByClassName("formData")[0]
             .setAttribute(["data-error-visible"], true) ;
         document
             .getElementsByClassName("formData")[0]
-            .setAttribute(["data-error"], "true")         ;
+            .setAttribute(["data-error"], "Il faut deux caractères au minimum pour ce champ.")         ;
         document
             .getElementsByClassName("formData")[0]
             .removeAttribute(["data-valid-visible"]) ;
+
+    } else if ( containsNumber.test(firstName.value.trim()) || containsForbiddenCaracters.test(firstName.value.trim()) ) {
+        document
+            .getElementsByClassName("formData")[0]
+            .setAttribute(["data-error-visible"], true) ;
+        document
+            .getElementsByClassName("formData")[0]
+            .setAttribute(["data-error"], "Caractères non autorisés pour ce champ.")         ;
+        document
+            .getElementsByClassName("formData")[0]
+            .removeAttribute(["data-valid-visible"]) ;
+
     } else {
         document
             .getElementsByClassName("formData")[0]

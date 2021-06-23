@@ -222,6 +222,8 @@ input {
 }
 .formData[data-error-visible="true"]::after {
   opacity: 1;
+  text-align: center;
+  font-size: 0.7em ;
 }
 .formData[data-error-visible="true"] .text-control {
   border: 4px solid #e54858;
