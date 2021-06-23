@@ -18,9 +18,10 @@ let firstNameFormData = document.getElementsByClassName("formData")[0] ;
 let lastNameFormData = document.getElementsByClassName("formData")[1] ;
 
 //REGEX
-let containsLettersOnly = /^[a-z]+$/i ; //return true if letters only
-let containsNumber = /[0-9]/ ; //return true if contains numbers
+let containsLettersOnly = /^[a-z]+$/i ;
+let containsNumber = /[0-9]/ ;
 let containsForbiddenCaracters = /[!"#$%&'()*+,./:;<=>?@^_`{|}~]/
+let inputIsEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i ;
 
 
 //EVENTS LISTENERS
