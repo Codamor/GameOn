@@ -18,19 +18,19 @@ function checkFirstName(){
 
 }
 
-function checklastName(){
+function checkLastName(){
 
 }
 
-function email(){
+function checkEmail(){
 
 }
 
-function birthDate(){
+function checkBirthDate(){
 
 }
 
-function quantity(){
+function checkQuantity(){
 
 }
 

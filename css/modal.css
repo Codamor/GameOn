@@ -224,7 +224,14 @@ input {
   opacity: 1;
 }
 .formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
+  border: 4px solid #e54858;
+}
+
+.formData[data-valid-visible="true"]::after {
+  opacity: 1;
+}
+.formData[data-valid-visible="true"] .text-control {
+  border: 4px solid #00FF00;
 }
 /* 
 input[data-error]::after {
