@@ -17,6 +17,8 @@ let checkBox2 = document.getElementById("checkbox2") ;
 let firstNameFormData = document.getElementsByClassName("formData")[0] ;
 let lastNameFormData = document.getElementsByClassName("formData")[1] ;
 let emailFormData = document.getElementsByClassName("formData")[2] ;
+let birthDateFormData = document.getElementsByClassName("formData")[3] ;
+let quantityFormData = document.getElementsByClassName("formData")[4] ;
 
 //REGEX
 let containsLettersOnly = /^[a-z]+$/i ;
