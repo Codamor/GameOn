@@ -2,7 +2,7 @@
 let firstName = document.getElementById("first") ;
 let lastName = document.getElementById("last") ;
 let email = document.getElementById("email") ;
-let birthdate = document.getElementById("birthdate") ;
+let birthDate = document.getElementById("birthdate") ;
 let quantity = document.getElementById("quantity") ;
 let location1 = document.getElementById("location1") ;
 let location2 = document.getElementById("location2") ;
