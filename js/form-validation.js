@@ -13,6 +13,7 @@ let location6 = document.getElementById("location6") ;
 let checkBox1 = document.getElementById("checkbox1") ;
 let checkBox2 = document.getElementById("checkbox2") ;
 
+
 //REGEX
 let containsLettersOnly = /^[a-z]+$/i ; //return true if letters only
 let containsNumber = /[0-9]/ ; //return true if contains numbers
