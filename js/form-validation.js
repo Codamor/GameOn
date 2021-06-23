@@ -13,3 +13,9 @@ let location6 = document.getElementById("location6") ;
 let checkBox1 = document.getElementById("checkbox1") ;
 let checkBox2 = document.getElementById("checkbox2") ;
 
+//EVENTS LISTENERS
+firstName.addEventListener("change", checkFirstName) ;
+lastName.addEventListener("change", checkLastName);
+email.addEventListener("change", checkEmail);
+birthdate.addEventListener("change", checkBirthDate);
+quantity.addEventListener("change", checkQuantity);
