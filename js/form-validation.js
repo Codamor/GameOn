@@ -1,4 +1,4 @@
-//DOM ELEMENTS
+//DOM ELEMENTS VALUES
 let firstName = document.getElementById("first") ;
 let lastName = document.getElementById("last") ;
 let email = document.getElementById("email") ;
