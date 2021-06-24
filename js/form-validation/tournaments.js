@@ -1,28 +1,5 @@
-function checkQuantity(){
+function checkNumberOfLocationsSelected(){
 
-    if (quantity.value < 0){
-        quantityFormData
-            .setAttribute(["data-error-visible"], true) ;
-        quantityFormData
-            .setAttribute(["data-error"], "Ce nombre n'est pas valide") ;
-        quantityFormData
-            .removeAttribute(["data-valid-visible"]) ;
-    } else {
-        quantityFormData
-            .removeAttribute(["data-error-visible"]) ;
-        quantityFormData
-            .removeAttribute(["data-error"])         ;
-        quantityFormData
-            .setAttribute(["data-valid-visible"], true) ;
-    }
-}
-
-
-
-
-function checkLocations(){
-
-    let actualQuantity = Number(quantity.value) ;
     let numberOfLocationsSelected = 0 ;
 
     if (locations[0].checked){
@@ -44,11 +21,61 @@ function checkLocations(){
         numberOfLocationsSelected += 1 ;
     }
 
-    if (actualQuantity > 0 && numberOfLocationsSelected === 0){
-        console.log("Sélectionnez les villes correspondantes.")
-    } else if (actualQuantity === 0 && numberOfLocationsSelected > 0){
-        console.log("Indiquez le nombre de tournois.")
-    } else {
-        console.log("ok"))
+    return numberOfLocationsSelected ;
 }
+
+function checkNumberOfTournaments(){
+
+    return Number(numberOfTournaments.value) ;
+
 }
+
+function checkTournaments(){
+
+    let numberOfLocationsSelected = checkNumberOfLocationsSelected() ;
+    let numberOfTournaments = checkNumberOfTournaments() ;
+
+    if (numberOfTournaments < 0){
+
+        numberOfTournamentsFormData
+            .setAttribute(["data-error-visible"], true) ;
+        numberOfTournamentsFormData
+            .setAttribute(["data-error"], "Ce nombre n'est pas valide") ;
+        numberOfTournamentsFormData
+            .removeAttribute(["data-valid-visible"]) ;
+
+    } else if (numberOfTournaments === 0 && numberOfLocationsSelected > 0){
+
+        numberOfTournamentsFormData
+            .setAttribute(["data-error-visible"], true) ;
+        numberOfTournamentsFormData
+            .setAttribute(["data-error"], "Veuillez indiquer le nombre de tournois.") ;
+        numberOfTournamentsFormData
+            .removeAttribute(["data-valid-visible"]) ;
+
+    } else if (numberOfTournaments > 0 && numberOfLocationsSelected === 0){
+
+        numberOfTournamentsFormData
+            .setAttribute(["data-error-visible"], true) ;
+        numberOfTournamentsFormData
+            .setAttribute(["data-error"], "Veuillez indiquer les villes correspondantes.") ;
+        numberOfTournamentsFormData
+            .removeAttribute(["data-valid-visible"]) ;
+
+    } else if ((numberOfTournaments > 0 && numberOfLocationsSelected > 0) || (numberOfTournaments === 0 && numberOfLocationsSelected === 0)){
+
+        numberOfTournamentsFormData
+            .removeAttribute(["data-error-visible"]) ;
+        numberOfTournamentsFormData
+            .removeAttribute(["data-error"]) ;
+        numberOfTournamentsFormData
+            .setAttribute(["data-valid-visible"], true) ;
+    }
+}
+
+
+
+
+
+
+
