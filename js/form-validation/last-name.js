@@ -1,4 +1,4 @@
-function checkLastNameLength(){
+function errorLastNameLength(){
     lastNameFormData
         .setAttribute(["data-error-visible"], true) ;
     lastNameFormData
@@ -7,7 +7,7 @@ function checkLastNameLength(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
-function checkIfNumberInLastName(){
+function errorNumberInLastName(){
     lastNameFormData
         .setAttribute(["data-error-visible"], true) ;
     lastNameFormData
@@ -29,11 +29,11 @@ function checkLastName(){
 
     if ( containsLettersOnly.test(lastName.value.trim()) && lastName.value.trim().length < 2){
 
-        checkLastNameLength() ;
+        errorLastNameLength() ;
 
     } else if ( containsNumber.test(lastName.value.trim()) || containsForbiddenCaracters.test(lastName.value.trim()) ) {
 
-        checkIfNumberInLastName() ;
+        errorNumberInLastName() ;
 
     } else {
 
