@@ -4,12 +4,7 @@ let lastName = document.getElementById("last") ;
 let email = document.getElementById("email") ;
 let birthDate = document.getElementById("birthdate") ;
 let quantity = document.getElementById("quantity") ;
-let location1 = document.getElementById("location1") ;
-let location2 = document.getElementById("location2") ;
-let location3 = document.getElementById("location3") ;
-let location4 = document.getElementById("location4") ;
-let location5 = document.getElementById("location5") ;
-let location6 = document.getElementById("location6") ;
+let locations = document.getElementsByName("location") ;
 let checkBox1 = document.getElementById("checkbox1") ;
 let checkBox2 = document.getElementById("checkbox2") ;
 
@@ -34,4 +29,8 @@ lastName.addEventListener("change", checkLastName);
 email.addEventListener("change", checkEmail);
 birthDate.addEventListener("change", checkBirthDate);
 quantity.addEventListener("change", checkQuantity);
+
+for(let i = 0 ; i < locations.length ; i ++){
+    locations[i].addEventListener("change", checkLocations) ;
+}
 
