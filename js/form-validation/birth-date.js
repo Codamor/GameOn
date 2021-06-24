@@ -21,5 +21,7 @@ function checkBirthDate(){
             .removeAttribute(["data-error"])         ;
         birthDateFormData
             .setAttribute(["data-valid-visible"], true) ;
+
+        return true ;
     }
 }

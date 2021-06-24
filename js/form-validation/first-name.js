@@ -38,6 +38,7 @@ function checkFirstName(){
     } else {
 
         firstNameIsValid() ;
+
         return true ;
     }
 }

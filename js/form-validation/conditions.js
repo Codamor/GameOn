@@ -1,19 +1,20 @@
-function checkEmail(){
-    if (inputIsEmail.test(email.value) === false){
+function checkConditions(){
 
-        emailFormData
+    if(conditions.checked === false){
+
+        conditionsFormData
             .setAttribute(["data-error-visible"], true) ;
-        emailFormData
-            .setAttribute(["data-error"], "Email non valide.") ;
-        emailFormData
+        conditionsFormData
+            .setAttribute(["data-error"], "Vous devez accepter les conditions.") ;
+        conditionsFormData
             .removeAttribute(["data-valid-visible"]) ;
 
     } else {
-        emailFormData
+        conditionsFormData
             .removeAttribute(["data-error-visible"]) ;
-        emailFormData
+        conditionsFormData
             .removeAttribute(["data-error"]) ;
-        emailFormData
+        conditionsFormData
             .setAttribute(["data-valid-visible"], true) ;
 
         return true ;

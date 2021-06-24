@@ -70,6 +70,8 @@ function checkTournaments(){
             .removeAttribute(["data-error"]) ;
         numberOfTournamentsFormData
             .setAttribute(["data-valid-visible"], true) ;
+
+        return true ;
     }
 }
 

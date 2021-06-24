@@ -38,6 +38,7 @@ function checkLastName(){
     } else {
 
         lastNameIsValid() ;
+
         return true ;
     }
 }
