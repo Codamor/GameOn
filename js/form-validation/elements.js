@@ -6,6 +6,7 @@ let birthDate = document.getElementById("birthdate") ;
 let numberOfTournaments = document.getElementById("quantity") ;
 let locations = document.getElementsByName("location") ;
 let conditions = document.getElementById("checkbox1") ;
+let formSubmit = document.getElementsByClassName("btn-submit")[0] ;
 
 //FORM DATA CLASS EASY SELECTION
 let firstNameFormData = document.getElementsByClassName("formData")[0] ;
@@ -30,6 +31,8 @@ email.addEventListener("change", checkEmail);
 birthDate.addEventListener("change", checkBirthDate);
 numberOfTournaments.addEventListener("change", checkTournaments);
 conditions.addEventListener("change", checkConditions) ;
+formSubmit.addEventListener("click", validate) ;
+
 
 for(let i = 0 ; i < locations.length ; i ++){
     locations[i].addEventListener("change", checkTournaments) ;

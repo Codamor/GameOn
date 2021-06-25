@@ -1,14 +1,16 @@
-function validate(){
+function validate(event){
 
+    event.preventDefault() ;
 
     if (checkFirstName() === false
-        && checkLastName() === false
-        && checkEmail()=== false
-        && checkBirthDate()=== false
-        && checkTournaments() === false
-        && checkConditions() === false)
+        || checkLastName() === false
+        || checkEmail()=== false
+        || checkBirthDate()=== false
+        || checkTournaments() === false
+        || checkConditions() === false){
 
         console.log("error") ;
-
-
+    } else {
+        console.log("ok") ;
+    }
 }

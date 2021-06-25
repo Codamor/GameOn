@@ -10,6 +10,7 @@ function checkEmail(){
         emailFormData
             .removeAttribute(["data-valid-visible"]) ;
 
+
     } else {
         emailFormData
             .removeAttribute(["data-error-visible"]) ;
