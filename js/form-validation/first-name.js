@@ -57,7 +57,6 @@ function checkFirstName(){
 
 
     } else if (firstNameValue === "") {
-        console.log(firstNameValue, typeof firstNameValue)
         displayFirstNameFieldIsEmpty();
         return false;
 

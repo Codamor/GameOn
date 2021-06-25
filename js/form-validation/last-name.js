@@ -1,6 +1,6 @@
 //FUNCTIONS TO DISPLAY MESSAGES
 
-function displayErrorFirstNameLength(){
+function displayErrorLastNameLength(){
     lastNameFormData
         .setAttribute(["data-error-visible"], true) ;
     lastNameFormData
@@ -18,7 +18,7 @@ function displayErrorForbiddenCharactersInNames(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
-function displayFirstNameFieldIsEmpty(){
+function displayLastNameFieldIsEmpty(){
     lastNameFormData
         .setAttribute(["data-error-visible"], true) ;
     lastNameFormData
@@ -28,7 +28,7 @@ function displayFirstNameFieldIsEmpty(){
 }
 
 
-function displayFirstNameIsValid(){
+function displayLastNameIsValid(){
     lastNameFormData
         .removeAttribute(["data-error-visible"]) ;
     lastNameFormData
@@ -37,9 +37,7 @@ function displayFirstNameIsValid(){
         .setAttribute(["data-valid-visible"], true) ;
 }
 
-
-
-//FUNCTIONS TO CHECK FIRST NAME
+//FUNCTIONS TO CHECK LAST NAME
 
 function checkLastName(){
 
@@ -48,7 +46,7 @@ function checkLastName(){
 
 
     if( containsLettersOnly.test(lastNameValue) && lastNameLength > 0 && lastNameLength < 2){
-        displayErrorFirstNameLength() ;
+        displayErrorLastNameLength() ;
         return false ;
 
     } else if (containsForbiddenCharactersForNames.test(lastNameValue)) {
@@ -57,13 +55,12 @@ function checkLastName(){
 
 
     } else if (lastNameValue === "") {
-        console.log(lastNameValue, typeof lastNameValue)
-        displayFirstNameFieldIsEmpty();
+        displayLastNameFieldIsEmpty();
         return false;
 
     } else {
 
-        displayFirstNameIsValid();
+        displayLastNameIsValid();
         return true;
     }
 }

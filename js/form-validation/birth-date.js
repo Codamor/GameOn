@@ -13,15 +13,26 @@ function checkBirthDate(){
         birthDateFormData
             .removeAttribute(["data-valid-visible"]) ;
 
+    } else if (isNaN(userBirthDateYear)) {
+
+        console.log(typeof new Date(birthDate.value).getFullYear(), new Date(birthDate.value).getFullYear())
+
+        birthDateFormData
+            .setAttribute(["data-error-visible"], true) ;
+        birthDateFormData
+            .setAttribute(["data-error"], "Ce champ est obligatoire.") ;
+        birthDateFormData
+            .removeAttribute(["data-valid-visible"]) ;
+
     } else {
 
-        birthDateFormData
+            birthDateFormData
             .removeAttribute(["data-error-visible"]) ;
-        birthDateFormData
+            birthDateFormData
             .removeAttribute(["data-error"])         ;
-        birthDateFormData
+            birthDateFormData
             .setAttribute(["data-valid-visible"], true) ;
 
-        return true ;
-    }
+            return true ;
+        }
 }
