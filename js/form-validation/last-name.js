@@ -31,7 +31,7 @@ function checkLastName(){
 
         errorLastNameLength() ;
 
-    } else if ( containsNumber.test(lastName.value.trim()) || containsForbiddenCaracters.test(lastName.value.trim()) ) {
+    } else if ( containsNumber.test(lastName.value.trim()) || containsForbiddenCharacters.test(lastName.value.trim()) ) {
 
         errorNumberInLastName() ;
 

@@ -1,4 +1,6 @@
-function errorFirstNameLenght(){
+//FUNCTIONS TO DISPLAY MESSAGES
+
+function displayErrorFirstNameLength(){
     firstNameFormData
         .setAttribute(["data-error-visible"], true) ;
     firstNameFormData
@@ -7,7 +9,7 @@ function errorFirstNameLenght(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
-function errorNumberInFirstName(){
+function displayErrorForbiddenCharactersInNames(){
     firstNameFormData
         .setAttribute(["data-error-visible"], true) ;
     firstNameFormData
@@ -16,7 +18,17 @@ function errorNumberInFirstName(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
-function firstNameIsValid(){
+function displayFirstNameFieldIsEmpty(){
+    firstNameFormData
+        .setAttribute(["data-error-visible"], true) ;
+    firstNameFormData
+        .setAttribute(["data-error"], "Ce champ est obligatoire.")         ;
+    firstNameFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
+
+function displayFirstNameIsValid(){
     firstNameFormData
         .removeAttribute(["data-error-visible"]) ;
     firstNameFormData
@@ -25,20 +37,36 @@ function firstNameIsValid(){
         .setAttribute(["data-valid-visible"], true) ;
 }
 
+
+
+//FUNCTIONS TO CHECK FIRST NAME
+
 function checkFirstName(){
 
-    if ( containsLettersOnly.test(firstName.value.trim()) && firstName.value.trim().length < 2){
+    let firstNameValue = firstName.value.trim() ;
+    let firstNameLength = firstName.value.trim().length ;
 
-        errorFirstNameLenght() ;
 
-    } else if ( containsNumber.test(firstName.value.trim()) || containsForbiddenCaracters.test(firstName.value.trim()) ) {
+    if( containsLettersOnly.test(firstNameValue) && firstNameLength > 0 && firstNameLength < 2){
+        displayErrorFirstNameLength() ;
+        return false ;
 
-        errorNumberInFirstName() ;
+    } else if (containsForbiddenCharactersForNames.test(firstNameValue)) {
+        displayErrorForbiddenCharactersInNames();
+        return false;
+
+
+    } else if (firstNameValue === "") {
+        console.log(firstNameValue, typeof firstNameValue)
+        displayFirstNameFieldIsEmpty();
+        return false;
 
     } else {
 
-        firstNameIsValid() ;
-
-        return true ;
+        displayFirstNameIsValid();
+        return true;
     }
 }
+
+
+

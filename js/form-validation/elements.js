@@ -18,7 +18,8 @@ let conditionsFormData = document.getElementsByClassName("formData")[5] ;
 //REGEX
 let containsLettersOnly = /^[a-z]+$/i ;
 let containsNumber = /[0-9]/ ;
-let containsForbiddenCaracters = /[!"#$%&'()*+,./:;<=>?@^_`{|}~]/
+let containsForbiddenCharactersForNames = /[!"#$%&'()*+,./:;<=>?@^_`{|}~0-9]/
+let containsForbiddenCharactersForEmail = /[!"#$%&'()*+,./:;<=>?@^_`{|}~]/
 let inputIsEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i ;
 
 
