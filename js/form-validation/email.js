@@ -1,4 +1,6 @@
 function checkEmail(){
+
+
     if (inputIsEmail.test(email.value) === false){
 
         emailFormData
