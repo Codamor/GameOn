@@ -41,35 +41,18 @@ function checkNumberOfLocationsSelected(){
 
     let numberOfLocationsSelected = 0 ;
 
-    if (locations[0].checked){
-        numberOfLocationsSelected += 1 ;
+    for (let i = 0 ; i < locations.length ; i++){
+        if(locations[i].checked){
+            numberOfLocationsSelected ++ ;
+        }
     }
-    if (locations[1].checked){
-        numberOfLocationsSelected += 1 ;
-    }
-    if (locations[2].checked){
-        numberOfLocationsSelected += 1 ;
-    }
-    if (locations[3].checked){
-        numberOfLocationsSelected += 1 ;
-    }
-    if (locations[4].checked){
-        numberOfLocationsSelected += 1 ;
-    }
-    if (locations[5].checked){
-        numberOfLocationsSelected += 1 ;
-    }
-
     return numberOfLocationsSelected ;
 }
 
 //FUNCTION TO CHECK TOURNAMENTS NUMBER
 function checkNumberOfTournaments(){
-
     return Number(numberOfTournaments.value) ;
-
 }
-
 
 //FUNCTION TO CHECK TOURNAMENTS
 function checkTournaments(){
