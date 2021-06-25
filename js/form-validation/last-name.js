@@ -37,7 +37,7 @@ function displayLastNameIsValid(){
         .setAttribute(["data-valid-visible"], true) ;
 }
 
-//FUNCTIONS TO CHECK LAST NAME
+//FUNCTION TO CHECK LAST NAME
 
 function checkLastName(){
 

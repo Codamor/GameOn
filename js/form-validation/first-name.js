@@ -39,7 +39,7 @@ function displayFirstNameIsValid(){
 
 
 
-//FUNCTIONS TO CHECK FIRST NAME
+//FUNCTION TO CHECK FIRST NAME
 
 function checkFirstName(){
 

@@ -27,7 +27,7 @@ let inputIsEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]
 firstName.addEventListener("change", checkFirstName) ;
 lastName.addEventListener("change", checkLastName);
 email.addEventListener("change", checkEmail);
-birthDate.addEventListener("focus", checkBirthDate);
+birthDate.addEventListener("change", checkBirthDate);
 numberOfTournaments.addEventListener("change", checkTournaments);
 conditions.addEventListener("change", checkConditions) ;
 

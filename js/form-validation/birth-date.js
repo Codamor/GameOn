@@ -1,3 +1,34 @@
+//FUNCTION TO DISPLAY MESSAGES
+
+function displayErrorInvalidBirthDate(){
+    birthDateFormData
+        .setAttribute(["data-error-visible"], true) ;
+    birthDateFormData
+        .setAttribute(["data-error"], "Date de naissance non valide.") ;
+    birthDateFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
+function displayErrorBirthDateIsNan(){
+    birthDateFormData
+        .setAttribute(["data-error-visible"], true) ;
+    birthDateFormData
+        .setAttribute(["data-error"], "Ce champ est obligatoire.") ;
+    birthDateFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
+function displayBirthDateIsValid(){
+    birthDateFormData
+        .removeAttribute(["data-error-visible"]) ;
+    birthDateFormData
+        .removeAttribute(["data-error"])         ;
+    birthDateFormData
+        .setAttribute(["data-valid-visible"], true) ;
+}
+
+
+//FUNCTION TO CHECK BIRTHDATE
 function checkBirthDate(){
 
     let currentYear = new Date().getFullYear() ;
@@ -6,33 +37,17 @@ function checkBirthDate(){
 
     if (userBirthDateYear > currentYear || userBirthDateYear < minimumUserBirthDateYear ){
 
-        birthDateFormData
-            .setAttribute(["data-error-visible"], true) ;
-        birthDateFormData
-            .setAttribute(["data-error"], "Date de naissance non valide.") ;
-        birthDateFormData
-            .removeAttribute(["data-valid-visible"]) ;
+        displayErrorInvalidBirthDate() ;
+        return false ;
 
     } else if (isNaN(userBirthDateYear)) {
 
-        console.log(typeof new Date(birthDate.value).getFullYear(), new Date(birthDate.value).getFullYear())
-
-        birthDateFormData
-            .setAttribute(["data-error-visible"], true) ;
-        birthDateFormData
-            .setAttribute(["data-error"], "Ce champ est obligatoire.") ;
-        birthDateFormData
-            .removeAttribute(["data-valid-visible"]) ;
+        displayErrorBirthDateIsNan() ;
+        return false ;
 
     } else {
 
-            birthDateFormData
-            .removeAttribute(["data-error-visible"]) ;
-            birthDateFormData
-            .removeAttribute(["data-error"])         ;
-            birthDateFormData
-            .setAttribute(["data-valid-visible"], true) ;
-
-            return true ;
+        displayBirthDateIsValid() ;
+        return true ;
         }
 }
