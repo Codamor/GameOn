@@ -14,6 +14,9 @@ function validate(event){
         console.log("error") ;
     } else {
 
+        closeModal();
+        openSubmitConfirmationModal();
+
     }
 }
 

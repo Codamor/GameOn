@@ -13,6 +13,8 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelectorAll(".close");
 const modalSubmitConfirmation = document.getElementsByClassName("submit-confirmation")[0] ;
+const closeSubmitBtn = document.getElementsByClassName("closeSubmit")[0] ;
+
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -32,12 +34,21 @@ function closeModal(){
       .setAttribute(["visible"], false) ;
 }
 
-//submit-confirmation modal
+
+//event listener for submit confirmation modal
+closeSubmitBtn.addEventListener("click", closeSubmitConfirmationModal) ;
+
+//functions for submit confirmation modal
 function openSubmitConfirmationModal(){
-  modalSubmitConfirmation.setAttribute(["visible", true]);
+  modalSubmitConfirmation.setAttribute(["visible"], true) ;
 }
 
 function closeSubmitConfirmationModal(){
-  modalSubmitConfirmation.setAttribute(["visible", false]);
+  modalSubmitConfirmation.setAttribute(["visible"], false) ;
 }
+
+
+
+
+
 
