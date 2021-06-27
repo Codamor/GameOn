@@ -169,6 +169,14 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
+.bground[visible="true"]{
+  display: block;
+}
+
+.bground[visible="false"]{
+  display: none;
+}
+
 .content {
   margin: 5% auto;
   width: 100%;
@@ -305,7 +313,8 @@ input[data-error]::after {
   left: 21%;
   top: 19%;
 }
-.close {
+.close,
+.closeSubmit{
   position: absolute;
   right: 15px;
   top: 15px;
@@ -316,7 +325,9 @@ input[data-error]::after {
   transform: scale(0.7);
 }
 .close:before,
-.close:after {
+.close:after,
+.closeSubmit:before,
+.closeSubmit:after{
   position: absolute;
   left: 15px;
   content: " ";
@@ -324,10 +335,12 @@ input[data-error]::after {
   width: 3px;
   background-color: #fff;
 }
-.close:before {
+.close:before,
+.closeSubmit:before{
   transform: rotate(45deg);
 }
-.close:after {
+.close:after,
+.closeSubmit:after{
   transform: rotate(-45deg);
 }
 .btn-submit,
@@ -342,6 +355,32 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
+
+/* confirmation modal */
+.submit-confirmation{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 375px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #232323;
+}
+
+.submit-confirmation[visible = "true"]{
+  display: flex;
+}
+
+.submit-confirmation[visible = "false"]{
+  display: none;
+}
+
 /* custom select styles */
 .custom-select {
   position: relative;
