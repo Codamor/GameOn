@@ -18,7 +18,8 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // launch modal form
 function launchModal() {
-  modalbg.style.display = "block";
+  modalbg
+      .setAttribute(["visible"], true) ;
 }
 
 // add modal close event
@@ -26,6 +27,7 @@ closeBtn.forEach( (close) => close.addEventListener("click", closeModal)) ;
 
 //add close modal function
 function closeModal(){
-  modalbg.style.display = "none" ;
+  modalbg
+      .setAttribute(["visible"], false) ;
 }
 

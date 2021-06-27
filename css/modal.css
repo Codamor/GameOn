@@ -169,6 +169,14 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
+.bground[visible="true"]{
+  display: block;
+}
+
+.bground[visible="false"]{
+  display: none;
+}
+
 .content {
   margin: 5% auto;
   width: 100%;
@@ -362,6 +370,10 @@ input[data-error]::after {
 
 .submit-confirmation[visible = "true"]{
   display: flex;
+}
+
+.submit-confirmation[visible = "false"]{
+  display: none;
 }
 
 /* custom select styles */
