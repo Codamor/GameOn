@@ -4,6 +4,8 @@ function validate(event){
 
     event.preventDefault() ;
 
+    console.log(event.target)
+
     if (checkFirstName() === false
         || checkLastName() === false
         || checkEmail()=== false
@@ -16,6 +18,7 @@ function validate(event){
 
         closeModal();
         openSubmitConfirmationModal();
+
 
     }
 }

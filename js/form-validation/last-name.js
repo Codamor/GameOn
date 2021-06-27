@@ -9,7 +9,7 @@ function displayErrorLastNameLength(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
-function displayErrorForbiddenCharactersInNames(){
+function displayErrorForbiddenCharactersInLastName(){
     lastNameFormData
         .setAttribute(["data-error-visible"], true) ;
     lastNameFormData
@@ -50,7 +50,7 @@ function checkLastName(){
         return false ;
 
     } else if (containsForbiddenCharactersForNames.test(lastNameValue)) {
-        displayErrorForbiddenCharactersInNames();
+        displayErrorForbiddenCharactersInLastName();
         return false;
 
 

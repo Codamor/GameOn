@@ -9,7 +9,7 @@ function displayErrorFirstNameLength(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
-function displayErrorForbiddenCharactersInNames(){
+function displayErrorForbiddenCharactersInFirstName(){
     firstNameFormData
         .setAttribute(["data-error-visible"], true) ;
     firstNameFormData
@@ -52,7 +52,7 @@ function checkFirstName(){
         return false ;
 
     } else if (containsForbiddenCharactersForNames.test(firstNameValue)) {
-        displayErrorForbiddenCharactersInNames();
+        displayErrorForbiddenCharactersInFirstName();
         return false;
 
 

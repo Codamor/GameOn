@@ -4,7 +4,16 @@ function displayErrorNumberOfTournamentsNegative(){
     numberOfTournamentsFormData
         .setAttribute(["data-error-visible"], true) ;
     numberOfTournamentsFormData
-        .setAttribute(["data-error"], "Ce nombre n'est pas valide") ;
+        .setAttribute(["data-error"], "Ce nombre n'est pas valide.") ;
+    numberOfTournamentsFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
+function displayErrorLettersInTournamentsNegative(){
+    numberOfTournamentsFormData
+        .setAttribute(["data-error-visible"], true) ;
+    numberOfTournamentsFormData
+        .setAttribute(["data-error"], "Les lettres ne sont pas autorisés sur ce champ.") ;
     numberOfTournamentsFormData
         .removeAttribute(["data-valid-visible"]) ;
 }
@@ -57,13 +66,21 @@ function checkNumberOfTournaments(){
 //FUNCTION TO CHECK TOURNAMENTS
 function checkTournaments(){
 
+
+
     let numberOfLocationsSelected = checkNumberOfLocationsSelected() ;
     let numberOfTournaments = checkNumberOfTournaments() ;
 
-    if (numberOfTournaments < 0){
+    console.log(numberOfTournaments)
 
-        displayErrorNumberOfTournamentsNegative() ;
-        return false ;
+    if (numberOfTournaments < 0) {
+
+        displayErrorNumberOfTournamentsNegative();
+        return false;
+
+    } else if(containsLetters.test(numberOfTournaments)){
+
+        displayErrorLettersInTournamentsNegative() ;
 
     } else if (numberOfTournaments === 0 && numberOfLocationsSelected > 0){
 
