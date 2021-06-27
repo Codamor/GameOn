@@ -1,5 +1,7 @@
 function validate(event){
 
+    let submitConfirmationModal = document.getElementsByClassName("submit-confirmation")[0];
+
     event.preventDefault() ;
 
     if (checkFirstName() === false
@@ -11,6 +13,7 @@ function validate(event){
 
         console.log("error") ;
     } else {
-        closeModal() ;
+
     }
 }
+

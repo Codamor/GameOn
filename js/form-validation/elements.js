@@ -8,6 +8,7 @@ let locations = document.getElementsByName("location") ;
 let conditions = document.getElementById("checkbox1") ;
 let formSubmit = document.getElementsByClassName("btn-submit")[0] ;
 
+
 //FORM DATA CLASS EASY SELECTION
 let firstNameFormData = document.getElementsByClassName("formData")[0] ;
 let lastNameFormData = document.getElementsByClassName("formData")[1] ;
