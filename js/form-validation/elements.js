@@ -17,7 +17,7 @@ let numberOfTournamentsFormData = document.getElementsByClassName("formData")[4]
 let conditionsFormData = document.getElementsByClassName("formData")[5] ;
 
 //REGEX
-let containsLettersOnly = /^[a-z]+$/i ;
+let containsLetters = /^[a-z]+$/i ;
 let containsNumber = /[0-9]/ ;
 let containsForbiddenCharactersForNames = /[!"#$%&'()*+,./:;<=>?@^_`{|}~0-9]/
 let containsForbiddenCharactersForEmail = /[!"#$%&'()*+,./:;<=>?@^_`{|}~]/

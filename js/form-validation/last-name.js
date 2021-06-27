@@ -45,7 +45,7 @@ function checkLastName(){
     let lastNameLength = lastName.value.trim().length ;
 
 
-    if( containsLettersOnly.test(lastNameValue) && lastNameLength > 0 && lastNameLength < 2){
+    if( containsLetters.test(lastNameValue) && lastNameLength > 0 && lastNameLength < 2){
         displayErrorLastNameLength() ;
         return false ;
 

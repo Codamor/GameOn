@@ -11,6 +11,6 @@ function validate(event){
 
         console.log("error") ;
     } else {
-        console.log("ok") ;
+        closeModal() ;
     }
 }

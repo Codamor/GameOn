@@ -47,7 +47,7 @@ function checkFirstName(){
     let firstNameLength = firstName.value.trim().length ;
 
 
-    if( containsLettersOnly.test(firstNameValue) && firstNameLength > 0 && firstNameLength < 2){
+    if( containsLetters.test(firstNameValue) && firstNameLength > 0 && firstNameLength < 2){
         displayErrorFirstNameLength() ;
         return false ;
 
