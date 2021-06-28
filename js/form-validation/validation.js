@@ -1,19 +1,26 @@
 function validate(event){
 
+    checkFirstName()
+    checkLastName()
+
     let submitConfirmationModal = document.getElementsByClassName("submit-confirmation")[0];
 
     event.preventDefault() ;
 
-    console.log(event.target)
-
-    if (checkFirstName() === false
+   if (checkFirstName() === false
         || checkLastName() === false
         || checkEmail()=== false
         || checkBirthDate()=== false
         || checkTournaments() === false
         || checkConditions() === false){
 
-        console.log("error") ;
+       checkFirstName() ;
+       checkLastName() ;
+       checkEmail();
+       checkBirthDate() ;
+       checkTournaments() ;
+       checkConditions() ;
+
     } else {
 
         closeModal();

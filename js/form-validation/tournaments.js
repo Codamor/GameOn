@@ -1,5 +1,14 @@
 //FUNCTIONS TO DISPLAY MESSAGES
 
+function displayTournamentNumberIsMandatory(){
+    numberOfTournamentsFormData
+        .setAttribute(["data-error-visible"], true) ;
+    numberOfTournamentsFormData
+        .setAttribute(["data-error"], "Ce champ est obligatoire.")         ;
+    numberOfTournamentsFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
 function displayErrorNumberOfTournamentsNegative(){
     numberOfTournamentsFormData
         .setAttribute(["data-error-visible"], true) ;
@@ -71,9 +80,13 @@ function checkTournaments(){
     let numberOfLocationsSelected = checkNumberOfLocationsSelected() ;
     let numberOfTournaments = checkNumberOfTournaments() ;
 
-    console.log(numberOfTournaments)
+    console.log(numberOfTournaments, typeof numberOfTournaments)
 
-    if (numberOfTournaments < 0) {
+    if (numberOfTournaments == ""){
+
+        displayTournamentNumberIsMandatory() ;
+
+    } else if (numberOfTournaments < 0) {
 
         displayErrorNumberOfTournamentsNegative();
         return false;

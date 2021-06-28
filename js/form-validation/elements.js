@@ -26,7 +26,7 @@ let inputIsEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]
 
 
 //EVENTS LISTENERS
-firstName.addEventListener("change", checkFirstName) ;
+firstName.addEventListener("focusout", checkFirstName) ;
 lastName.addEventListener("change", checkLastName);
 email.addEventListener("change", checkEmail);
 birthDate.addEventListener("change", checkBirthDate);

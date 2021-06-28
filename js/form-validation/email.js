@@ -1,5 +1,14 @@
 //FUNCTIONS TO DISPLAY MESSAGES
 
+function displayEmailIsMandatory(){
+    emailFormData
+        .setAttribute(["data-error-visible"], true) ;
+    emailFormData
+        .setAttribute(["data-error"], "Ce champ est obligatoire.")         ;
+    emailFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
 function displayErrorEmailNotValid(){
     emailFormData
         .setAttribute(["data-error-visible"], true) ;
@@ -21,7 +30,13 @@ function emailIsValid(){
 //FUNCTION TO CHECK EMAIL
 function checkEmail(){
 
-    if (inputIsEmail.test(email.value) === false){
+    console.log(email.value)
+
+    if (email.value === ""){
+
+        displayEmailIsMandatory() ;
+
+    } else if (inputIsEmail.test(email.value) === false){
 
         displayErrorEmailNotValid() ;
         return false ;

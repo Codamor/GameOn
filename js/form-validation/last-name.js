@@ -18,7 +18,7 @@ function displayErrorForbiddenCharactersInLastName(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
-function displayLastNameFieldIsEmpty(){
+function displayLastNameIsMandatory(){
     lastNameFormData
         .setAttribute(["data-error-visible"], true) ;
     lastNameFormData
@@ -55,7 +55,7 @@ function checkLastName(){
 
 
     } else if (lastNameValue === "") {
-        displayLastNameFieldIsEmpty();
+        displayLastNameIsMandatory();
         return false;
 
     } else {

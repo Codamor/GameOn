@@ -18,7 +18,7 @@ function displayErrorForbiddenCharactersInFirstName(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
-function displayFirstNameFieldIsEmpty(){
+function displayFirstNameIsMandatory(){
     firstNameFormData
         .setAttribute(["data-error-visible"], true) ;
     firstNameFormData
@@ -57,7 +57,7 @@ function checkFirstName(){
 
 
     } else if (firstNameValue === "") {
-        displayFirstNameFieldIsEmpty();
+        displayFirstNameIsMandatory();
         return false;
 
     } else {
