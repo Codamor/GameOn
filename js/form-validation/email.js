@@ -30,8 +30,6 @@ function emailIsValid(){
 //FUNCTION TO CHECK EMAIL
 function checkEmail(){
 
-    console.log(email.value)
-
     if (email.value === ""){
 
         displayEmailIsMandatory() ;

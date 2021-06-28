@@ -9,13 +9,22 @@ function displayErrorInvalidBirthDate(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
-function displayErrorBirthDateIsNan(){
+function displayErrorBirthDateIsMandatory(){
     birthDateFormData
         .setAttribute(["data-error-visible"], true) ;
     birthDateFormData
         .setAttribute(["data-error"], "Ce champ est obligatoire.") ;
     birthDateFormData
         .removeAttribute(["data-valid-visible"]) ;
+}
+
+function displayErrorTooYoung() {
+    birthDateFormData
+        .setAttribute(["data-error-visible"], true);
+    birthDateFormData
+        .setAttribute(["data-error"], "Les tournois sont autorisés à partir de 12 ans.");
+    birthDateFormData
+        .removeAttribute(["data-valid-visible"]);
 }
 
 function displayBirthDateIsValid(){
@@ -31,19 +40,27 @@ function displayBirthDateIsValid(){
 //FUNCTION TO CHECK BIRTHDATE
 function checkBirthDate(){
 
-    let currentYear = new Date().getFullYear() ;
+    let currentYear =  new Date().getFullYear() ;
     let userBirthDateYear = new Date(birthDate.value).getFullYear() ;
-    let minimumUserBirthDateYear = new Date("1900-01-01").getFullYear() ;
+    let maximumUserBirthDateYear = new Date("1900-01-01").getFullYear() ;
+    let minimumUserBirthDateYear = currentYear - 12 ;
 
-    if (userBirthDateYear > currentYear || userBirthDateYear < minimumUserBirthDateYear ){
+    if (userBirthDateYear > currentYear || userBirthDateYear < maximumUserBirthDateYear ){
 
         displayErrorInvalidBirthDate() ;
+
         return false ;
 
     } else if (isNaN(userBirthDateYear)) {
 
-        displayErrorBirthDateIsNan() ;
+        displayErrorBirthDateIsMandatory() ;
+
         return false ;
+
+    } else if (userBirthDateYear > minimumUserBirthDateYear){
+
+        displayErrorTooYoung() ;
+
 
     } else {
 

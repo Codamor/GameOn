@@ -80,9 +80,7 @@ function checkTournaments(){
     let numberOfLocationsSelected = checkNumberOfLocationsSelected() ;
     let numberOfTournaments = checkNumberOfTournaments() ;
 
-    console.log(numberOfTournaments, typeof numberOfTournaments)
-
-    if (numberOfTournaments == ""){
+    if (numberOfTournaments === ""){
 
         displayTournamentNumberIsMandatory() ;
 
