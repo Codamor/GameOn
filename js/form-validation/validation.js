@@ -2,20 +2,21 @@ function validate(event){
 
     event.preventDefault() ;
 
-    checkFirstName() ;
-    checkLastName() ;
+    checkName() ;
     checkEmail();
     checkBirthDate() ;
     checkTournaments() ;
     checkConditions() ;
 
-   if (checkFirstName() === true
 
-        && checkLastName() === true
+   if (checkName() === true
+
+        && checkName() === true
         && checkEmail()=== true
         && checkBirthDate()=== true
         && checkTournaments() === true
         && checkConditions() === true){
+
 
         closeModal();
         openSubmitConfirmationModal();
