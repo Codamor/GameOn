@@ -40,10 +40,10 @@ function displayBirthDateIsValid(){
 //FUNCTION TO CHECK BIRTHDATE
 function checkBirthDate(){
 
-    let currentYear =  new Date().getFullYear() ;
-    let userBirthDateYear = new Date(birthDate.value).getFullYear() ;
-    let maximumUserBirthDateYear = new Date("1900-01-01").getFullYear() ;
-    let minimumUserBirthDateYear = currentYear - 12 ;
+    let currentYear =  new Date() ;
+    let userBirthDateYear = new Date(birthDate.value) ;
+    let maximumUserBirthDateYear = new Date("1900-01-01")
+    let minimumUserBirthDateYear = new Date().setFullYear(currentYear.getFullYear() - 12);
 
     if (userBirthDateYear > currentYear || userBirthDateYear < maximumUserBirthDateYear ){
 
