@@ -1,5 +1,31 @@
-//FUNCTIONS TO DISPLAY MESSAGES
+//FUNCTION TO CHECK FIRST NAME
+function checkFirstName(){
 
+    let firstNameValue = firstName.value.trim() ;
+    let firstNameLength = firstName.value.trim().length ;
+
+
+    if( containsLetters.test(firstNameValue) && firstNameLength > 0 && firstNameLength < 2){
+        displayErrorFirstNameLength() ;
+        return false ;
+
+    } else if (containsForbiddenCharactersForNames.test(firstNameValue)) {
+        displayErrorForbiddenCharactersInFirstName();
+        return false;
+
+
+    } else if (firstNameValue === "") {
+        displayFirstNameIsMandatory();
+        return false;
+
+    } else {
+
+        displayFirstNameIsValid();
+        return true;
+    }
+}
+
+//FUNCTIONS TO DISPLAY MESSAGES
 function displayErrorFirstNameLength(){
     firstNameFormData
         .setAttribute(["data-error-visible"], true) ;
@@ -36,33 +62,6 @@ function displayFirstNameIsValid(){
         .setAttribute(["data-valid-visible"], true) ;
 }
 
-
-//FUNCTION TO CHECK FIRST NAME
-function checkFirstName(){
-
-    let firstNameValue = firstName.value.trim() ;
-    let firstNameLength = firstName.value.trim().length ;
-
-
-    if( containsLetters.test(firstNameValue) && firstNameLength > 0 && firstNameLength < 2){
-        displayErrorFirstNameLength() ;
-        return false ;
-
-    } else if (containsForbiddenCharactersForNames.test(firstNameValue)) {
-        displayErrorForbiddenCharactersInFirstName();
-        return false;
-
-
-    } else if (firstNameValue === "") {
-        displayFirstNameIsMandatory();
-        return false;
-
-    } else {
-
-        displayFirstNameIsValid();
-        return true;
-    }
-}
 
 
 

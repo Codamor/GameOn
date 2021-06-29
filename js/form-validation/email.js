@@ -1,5 +1,23 @@
-//FUNCTIONS TO DISPLAY MESSAGES
+//FUNCTION TO CHECK EMAIL
+function checkEmail(){
 
+    if (email.value === ""){
+
+        displayEmailIsMandatory() ;
+
+    } else if (inputIsEmail.test(email.value) === false){
+
+        displayErrorEmailNotValid() ;
+        return false ;
+
+    } else {
+
+        emailIsValid() ;
+        return true ;
+    }
+}
+
+//FUNCTIONS TO DISPLAY MESSAGES
 function displayEmailIsMandatory(){
     emailFormData
         .setAttribute(["data-error-visible"], true) ;
@@ -25,23 +43,4 @@ function emailIsValid(){
         .removeAttribute(["data-error"]) ;
     emailFormData
         .setAttribute(["data-valid-visible"], true) ;
-}
-
-//FUNCTION TO CHECK EMAIL
-function checkEmail(){
-
-    if (email.value === ""){
-
-        displayEmailIsMandatory() ;
-
-    } else if (inputIsEmail.test(email.value) === false){
-
-        displayErrorEmailNotValid() ;
-        return false ;
-
-    } else {
-
-        emailIsValid() ;
-        return true ;
-    }
 }
