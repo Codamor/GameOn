@@ -69,13 +69,17 @@ function checkNumberOfLocationsSelected(){
 
 //FUNCTION TO CHECK TOURNAMENTS NUMBER
 function checkNumberOfTournaments(){
-    return Number(numberOfTournaments.value) ;
+    if (numberOfTournaments.value === ""){
+        return numberOfTournaments.value ;
+
+    } else {
+        return Number(numberOfTournaments.value) ;
+    }
+
 }
 
 //FUNCTION TO CHECK TOURNAMENTS
 function checkTournaments(){
-
-
 
     let numberOfLocationsSelected = checkNumberOfLocationsSelected() ;
     let numberOfTournaments = checkNumberOfTournaments() ;
@@ -103,7 +107,7 @@ function checkTournaments(){
         displayErrorTournamentsNumberWithoutLocations() ;
         return false ;
 
-    } else if ((numberOfTournaments > 0 && numberOfLocationsSelected > 0) || (numberOfTournaments === 0 && numberOfLocationsSelected === 0)){
+    } else {
 
         tournamentsInputIsOk() ;
         return true ;
