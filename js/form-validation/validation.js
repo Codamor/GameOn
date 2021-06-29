@@ -2,15 +2,13 @@ function validate(event){
 
     event.preventDefault() ;
 
-    checkFirstName() ;
-    checkLastName() ;
+    checkName() ;
     checkEmail();
     checkBirthDate() ;
     checkTournaments() ;
     checkConditions() ;
 
-   if (checkFirstName() === true
-        || checkLastName() === true
+   if (    checkName()
         || checkEmail()=== true
         || checkBirthDate()=== true
         || checkTournaments() === true
