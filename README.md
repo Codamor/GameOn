@@ -6,6 +6,12 @@ GameOn est une PME, GameOn, spécialisée dans les conférences et les concours 
 
 Je dois développer la validation du formulaire d'inscription.
 
+## A ma disposition
+
+Je dispose du code HTML et CSS qui compose la page du site et de son formulaire.
+
+Le code Javascript qui permet l'ouverture de la modal est également fourni.
+
 
 ## Livrables attendus
 
