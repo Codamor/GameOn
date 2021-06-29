@@ -10,8 +10,8 @@ let formSubmit = document.getElementsByClassName("btn-submit")[0] ;
 
 
 //FORM DATA CLASS EASY SELECTION
-// let firstNameFormData = document.getElementsByClassName("formData")[0] ;
-// let lastNameFormData = document.getElementsByClassName("formData")[1] ;
+let firstNameFormData = document.getElementsByClassName("formData")[0] ;
+let lastNameFormData = document.getElementsByClassName("formData")[1] ;
 let emailFormData = document.getElementsByClassName("formData")[2] ;
 let birthDateFormData = document.getElementsByClassName("formData")[3] ;
 let numberOfTournamentsFormData = document.getElementsByClassName("formData")[4] ;
@@ -25,8 +25,8 @@ let inputIsEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@
 
 
 //EVENTS LISTENERS
-firstName.addEventListener("change", checkName) ;
-lastName.addEventListener("change", checkName);
+firstName.addEventListener("change", checkFirstName) ;
+lastName.addEventListener("change", checkLastName);
 email.addEventListener("change", checkEmail);
 birthDate.addEventListener("change", checkBirthDate);
 numberOfTournaments.addEventListener("change", checkTournaments);
