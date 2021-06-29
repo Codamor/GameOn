@@ -27,6 +27,7 @@ function displayFirstNameIsMandatory(){
         .removeAttribute(["data-valid-visible"]) ;
 }
 
+
 function displayFirstNameIsValid(){
     firstNameFormData
         .removeAttribute(["data-error-visible"]) ;
@@ -37,7 +38,9 @@ function displayFirstNameIsValid(){
 }
 
 
+
 //FUNCTION TO CHECK FIRST NAME
+
 function checkFirstName(){
 
     let firstNameValue = firstName.value.trim() ;
@@ -63,8 +66,6 @@ function checkFirstName(){
         return true;
     }
 }
-
-
 
 
 

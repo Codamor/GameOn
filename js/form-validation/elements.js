@@ -10,8 +10,8 @@ let formSubmit = document.getElementsByClassName("btn-submit")[0] ;
 
 
 //FORM DATA CLASS EASY SELECTION
-// let firstNameFormData = document.getElementsByClassName("formData")[0] ;
-// let lastNameFormData = document.getElementsByClassName("formData")[1] ;
+let firstNameFormData = document.getElementsByClassName("formData")[0] ;
+let lastNameFormData = document.getElementsByClassName("formData")[1] ;
 let emailFormData = document.getElementsByClassName("formData")[2] ;
 let birthDateFormData = document.getElementsByClassName("formData")[3] ;
 let numberOfTournamentsFormData = document.getElementsByClassName("formData")[4] ;
@@ -19,14 +19,15 @@ let conditionsFormData = document.getElementsByClassName("formData")[5] ;
 
 //REGEX
 let containsLetters = /^[a-z]+$/i ;
+let containsNumber = /[0-9]/ ;
 let containsForbiddenCharactersForNames = /[!"#$%&'()*+,./:;<=>?@^_`{|}~0-9]/
 let containsForbiddenCharactersForEmail = /[!"#$%&'()*+,./:;<=>?@^_`{|}~]/
 let inputIsEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ;
 
 
 //EVENTS LISTENERS
-firstName.addEventListener("change", checkName) ;
-lastName.addEventListener("change", checkName);
+firstName.addEventListener("focusout", checkFirstName) ;
+lastName.addEventListener("change", checkLastName);
 email.addEventListener("change", checkEmail);
 birthDate.addEventListener("change", checkBirthDate);
 numberOfTournaments.addEventListener("change", checkTournaments);
