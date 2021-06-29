@@ -10,11 +10,11 @@ function validate(event){
     checkConditions() ;
 
    if (checkFirstName() === true
-        || checkLastName() === true
-        || checkEmail()=== true
-        || checkBirthDate()=== true
-        || checkTournaments() === true
-        || checkConditions() === true){
+        && checkLastName() === true
+        && checkEmail()=== true
+        && checkBirthDate()=== true
+        && checkTournaments() === true
+        && checkConditions() === true){
 
         closeModal();
         openSubmitConfirmationModal();
