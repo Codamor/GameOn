@@ -10,6 +10,7 @@ function validate(event){
     checkConditions() ;
 
    if (checkFirstName() === true
+
         && checkLastName() === true
         && checkEmail()=== true
         && checkBirthDate()=== true
