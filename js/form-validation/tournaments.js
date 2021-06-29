@@ -1,59 +1,3 @@
-//FUNCTIONS TO DISPLAY MESSAGES
-
-function displayTournamentNumberIsMandatory(){
-    numberOfTournamentsFormData
-        .setAttribute(["data-error-visible"], true) ;
-    numberOfTournamentsFormData
-        .setAttribute(["data-error"], "Ce champ est obligatoire.")         ;
-    numberOfTournamentsFormData
-        .removeAttribute(["data-valid-visible"]) ;
-}
-
-function displayErrorNumberOfTournamentsNegative(){
-    numberOfTournamentsFormData
-        .setAttribute(["data-error-visible"], true) ;
-    numberOfTournamentsFormData
-        .setAttribute(["data-error"], "Ce nombre n'est pas valide.") ;
-    numberOfTournamentsFormData
-        .removeAttribute(["data-valid-visible"]) ;
-}
-
-function displayErrorLettersInTournamentsNegative(){
-    numberOfTournamentsFormData
-        .setAttribute(["data-error-visible"], true) ;
-    numberOfTournamentsFormData
-        .setAttribute(["data-error"], "Les lettres ne sont pas autorisés sur ce champ.") ;
-    numberOfTournamentsFormData
-        .removeAttribute(["data-valid-visible"]) ;
-}
-
-function displayErrorLocationsWithoutTournamentNumber(){
-    numberOfTournamentsFormData
-        .setAttribute(["data-error-visible"], true) ;
-    numberOfTournamentsFormData
-        .setAttribute(["data-error"], "Veuillez indiquer le nombre de tournois.") ;
-    numberOfTournamentsFormData
-        .removeAttribute(["data-valid-visible"]) ;
-}
-
-function displayErrorTournamentsNumberWithoutLocations(){
-    numberOfTournamentsFormData
-        .setAttribute(["data-error-visible"], true) ;
-    numberOfTournamentsFormData
-        .setAttribute(["data-error"], "Veuillez indiquer les villes correspondantes.") ;
-    numberOfTournamentsFormData
-        .removeAttribute(["data-valid-visible"]) ;
-}
-
-function tournamentsInputIsOk(){
-    numberOfTournamentsFormData
-        .removeAttribute(["data-error-visible"]) ;
-    numberOfTournamentsFormData
-        .removeAttribute(["data-error"]) ;
-    numberOfTournamentsFormData
-        .setAttribute(["data-valid-visible"], true) ;
-}
-
 //FUNCTION TO CHECK LOCATIONS
 function checkNumberOfLocationsSelected(){
 
@@ -114,6 +58,60 @@ function checkTournaments(){
     }
 }
 
+//FUNCTIONS TO DISPLAY MESSAGES
+function displayTournamentNumberIsMandatory(){
+    numberOfTournamentsFormData
+        .setAttribute(["data-error-visible"], true) ;
+    numberOfTournamentsFormData
+        .setAttribute(["data-error"], "Ce champ est obligatoire.")         ;
+    numberOfTournamentsFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
+function displayErrorNumberOfTournamentsNegative(){
+    numberOfTournamentsFormData
+        .setAttribute(["data-error-visible"], true) ;
+    numberOfTournamentsFormData
+        .setAttribute(["data-error"], "Ce nombre n'est pas valide.") ;
+    numberOfTournamentsFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
+function displayErrorLettersInTournamentsNegative(){
+    numberOfTournamentsFormData
+        .setAttribute(["data-error-visible"], true) ;
+    numberOfTournamentsFormData
+        .setAttribute(["data-error"], "Les lettres ne sont pas autorisés sur ce champ.") ;
+    numberOfTournamentsFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
+function displayErrorLocationsWithoutTournamentNumber(){
+    numberOfTournamentsFormData
+        .setAttribute(["data-error-visible"], true) ;
+    numberOfTournamentsFormData
+        .setAttribute(["data-error"], "Veuillez indiquer le nombre de tournois.") ;
+    numberOfTournamentsFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
+function displayErrorTournamentsNumberWithoutLocations(){
+    numberOfTournamentsFormData
+        .setAttribute(["data-error-visible"], true) ;
+    numberOfTournamentsFormData
+        .setAttribute(["data-error"], "Veuillez indiquer les villes correspondantes.") ;
+    numberOfTournamentsFormData
+        .removeAttribute(["data-valid-visible"]) ;
+}
+
+function tournamentsInputIsOk(){
+    numberOfTournamentsFormData
+        .removeAttribute(["data-error-visible"]) ;
+    numberOfTournamentsFormData
+        .removeAttribute(["data-error"]) ;
+    numberOfTournamentsFormData
+        .setAttribute(["data-valid-visible"], true) ;
+}
 
 
 

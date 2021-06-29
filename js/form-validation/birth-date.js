@@ -1,4 +1,34 @@
-//FUNCTION TO DISPLAY MESSAGES
+//FUNCTION TO CHECK BIRTHDATE
+function checkBirthDate(){
+
+    let currentYear =  new Date() ;
+    let userBirthDateYear = new Date(birthDate.value) ;
+    let maximumUserBirthDateYear = new Date("1900-01-01")
+    let minimumUserBirthDateYear = new Date().setFullYear(currentYear.getFullYear() - 12);
+
+    if (userBirthDateYear > currentYear || userBirthDateYear < maximumUserBirthDateYear ){
+
+        displayErrorInvalidBirthDate() ;
+        return false ;
+
+    } else if (isNaN(userBirthDateYear)) {
+
+        displayErrorBirthDateIsMandatory() ;
+        return false ;
+
+    } else if (userBirthDateYear > minimumUserBirthDateYear){
+
+        displayErrorTooYoung() ;
+
+
+    } else {
+
+        displayBirthDateIsValid() ;
+        return true ;
+        }
+}
+
+//FUNCTIONS TO DISPLAY MESSAGES
 
 function displayErrorInvalidBirthDate(){
     birthDateFormData
@@ -34,37 +64,6 @@ function displayBirthDateIsValid(){
         .removeAttribute(["data-error"])         ;
     birthDateFormData
         .setAttribute(["data-valid-visible"], true) ;
-}
-
-
-//FUNCTION TO CHECK BIRTHDATE
-function checkBirthDate(){
-
-    let currentYear =  new Date() ;
-    let userBirthDateYear = new Date(birthDate.value) ;
-    let maximumUserBirthDateYear = new Date("1900-01-01")
-    let minimumUserBirthDateYear = new Date().setFullYear(currentYear.getFullYear() - 12);
-
-    if (userBirthDateYear > currentYear || userBirthDateYear < maximumUserBirthDateYear ){
-
-        displayErrorInvalidBirthDate() ;
-        return false ;
-
-    } else if (isNaN(userBirthDateYear)) {
-
-        displayErrorBirthDateIsMandatory() ;
-        return false ;
-
-    } else if (userBirthDateYear > minimumUserBirthDateYear){
-
-        displayErrorTooYoung() ;
-
-
-    } else {
-
-        displayBirthDateIsValid() ;
-        return true ;
-        }
 }
 
 

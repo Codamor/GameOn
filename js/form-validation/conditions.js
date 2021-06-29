@@ -1,5 +1,19 @@
-//FONCTION TO DISPLAY MESSAGES
+//FUNCTION TO CHECK CONDITIONS
+function checkConditions(){
 
+    if(conditions.checked === false){
+
+        displayErrorConditionsNotChecked() ;
+        return false ;
+
+    } else {
+
+        conditionsIsChecked() ;
+        return true ;
+    }
+}
+
+//FONCTIONS TO DISPLAY MESSAGES
 function displayErrorConditionsNotChecked(){
     conditionsFormData
         .setAttribute(["data-error-visible"], true) ;
@@ -16,20 +30,4 @@ function conditionsIsChecked(){
         .removeAttribute(["data-error"]) ;
     conditionsFormData
         .setAttribute(["data-valid-visible"], true) ;
-}
-
-
-//FUNCTION TO CHECK CONDITIONS
-function checkConditions(){
-
-    if(conditions.checked === false){
-
-        displayErrorConditionsNotChecked() ;
-        return false ;
-
-    } else {
-
-        conditionsIsChecked() ;
-        return true ;
-    }
 }
