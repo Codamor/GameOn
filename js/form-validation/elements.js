@@ -36,4 +36,3 @@ formSubmit.addEventListener("click", validate) ;
 for(let i = 0 ; i < locations.length ; i ++){
     locations[i].addEventListener("change", checkTournaments) ;
 }
-
