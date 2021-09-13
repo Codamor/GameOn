@@ -10,17 +10,13 @@
 
 GameOn est une PME, GameOn, spécialisée dans les conférences et les concours de jeux.
 
-## Presentation du projet
-
-L'objectif principal de ce projet était de réaliser le processus de validation du formulaire d'inscription.
-
 ## Ce que ce projet m'a permis de pratiquer
 
 ### Compétences
 
 * Javascript :
   * manipuler le DOM,
-  * écouter des évènements,
+  * écouter les évènements,
   * récupérer et contrôler les données utilisateurs.
 
 ### Technologies / méthodes
