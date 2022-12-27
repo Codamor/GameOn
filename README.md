@@ -6,49 +6,43 @@
 
 ![GameOn](GameOn_capture.png "GameOn")
 
-## Présentation du contexte
+## Presentation of the context
 
-GameOn est une PME, GameOn, spécialisée dans les conférences et les concours de jeux.
+GameOn is an SME, GameOn, specialized in conferences and game competitions.
 
-## Ce que ce projet m'a permis de pratiquer
+## What this project allowed me to practice
 
-### Compétences
+### Skills
 
-* Javascript :
-  * manipuler le DOM,
-  * écouter les évènements,
-  * récupérer et contrôler les données utilisateurs.
+* JavaScript:
+  * manipulate the DOM,
+  * listen to events,
+  * collect and control user data.
 
-### Technologies / méthodes
+### Technologies / methods
 
-* Javascript
+* HTML
+* CSS
+* JavaScript
 
-## Livrables attendus
+## Expected deliverables
 
-* Le formulaire devait valide quand l'utilisateur clique sur "Submit"
-
-
-* Les données devaient être saisies correctement :
-
-  * Le champ Prénom a un minimum de 2 caractères / n'est pas vide,
-  * le champ du nom de famille a un minimum de 2 caractères / n'est pas vide,
-  * l'adresse électronique est valide,
-  * pour le nombre de concours, une valeur numérique est saisie,
-  * un bouton radio est sélectionné,
-  * la case des conditions générales est cochée, l'autre case est facultative / peut être laissée décochée,
-  * conserver les données du formulaire (ne pas effacer le formulaire) lorsqu'il ne passe pas la validation.
+* The form should be valid when the user clicks on "Submit"
 
 
-Je devais également :
+* The data had to be entered correctly:
 
-* ajouter les messages de validation / erreur,
+  * The First Name field has a minimum of 2 characters / is not empty,
+  * the last name field has a minimum of 2 characters / is not empty,
+  * email address is valid,
+  * for the number of competitions, a numerical value is entered,
+  * a radio button is selected,
+  * the terms and conditions box is checked, the other box is optional / can be left unchecked,
+  * keep form data (don't clear form) when it doesn't pass validation.
 
-* ajouter un message de confirmation lors d'un envoi réussi.
 
+I also had to:
 
+* add validation/error messages,
 
-## A ma disposition
-
-J'ai disposé du code HTML et CSS qui compose la page du site et de son formulaire.
-
-Le code Javascript qui permet l'ouverture de la modal était également fourni.
+* add a confirmation message when sending successfully.
